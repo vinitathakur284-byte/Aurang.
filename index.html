@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aurang — building businesses from India for the world. Pharmaceutical sourcing, contract manufacturing, global trade, commerce and technology.">
+<meta name="theme-color" content="#10100f">
+<title>Aurang — Healthcare · Commerce · Technology</title>
+<style>
+:root{--ink:#11110f;--paper:#f5f1e9;--warm:#ded5c5;--muted:#706d66;--line:#d7d0c4;--white:#fffdf8;--serif:Georgia,"Times New Roman",serif;--sans:Inter,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}
+.nav{position:fixed;z-index:10;top:0;left:0;right:0;padding:20px 5vw;display:flex;justify-content:space-between;align-items:center;background:rgba(245,241,233,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(215,208,196,.65)}
+.logo{font-weight:800;letter-spacing:.16em;font-size:15px}.navlinks{display:flex;gap:28px;font-size:12px;text-transform:uppercase;letter-spacing:.08em}.navlinks a:hover{opacity:.55}
+.menu{display:none;border:0;background:none;font-size:22px}
+.hero{min-height:100vh;padding:170px 7vw 80px;display:grid;grid-template-columns:1.2fr .8fr;align-items:end;border-bottom:1px solid var(--line)}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;color:var(--muted);margin-bottom:24px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(60px,9vw,135px);line-height:.9;letter-spacing:-.055em;margin:0;max-width:950px}
+.hero-copy{max-width:430px;margin-left:auto;font-size:17px;color:#4f4d48}.hero-copy strong{color:var(--ink)}
+.ctas{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}.btn{display:inline-block;padding:14px 21px;border:1px solid var(--ink);font-size:12px;text-transform:uppercase;letter-spacing:.1em}.btn.dark{background:var(--ink);color:var(--white)}.btn:hover{transform:translateY(-2px)}
+.section{padding:110px 7vw;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;margin-bottom:70px}.section h2{font-family:var(--serif);font-size:clamp(44px,6vw,82px);line-height:.95;font-weight:400;letter-spacing:-.04em;margin:0}.lead{font-size:20px;max-width:620px;color:#4f4d48}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink)}.card{padding:32px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);min-height:260px}.num{font-size:11px;color:var(--muted);letter-spacing:.14em}.card h3{font-family:var(--serif);font-size:32px;font-weight:400;margin:42px 0 12px}.card p{color:#5e5b54}.arrow{display:inline-block;margin-top:25px;font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+.capabilities{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}.cap{background:var(--paper);padding:27px;min-height:145px}.cap h4{margin:0 0 10px;font-size:15px}.cap p{margin:0;color:var(--muted);font-size:13px}
+.process{display:grid;grid-template-columns:repeat(6,1fr);border-top:1px solid var(--ink)}.step{padding:25px 18px;border-right:1px solid var(--ink)}.step:last-child{border-right:0}.step b{font-size:11px}.step h4{font-family:var(--serif);font-size:21px;font-weight:400}
+.darksection{background:var(--ink);color:var(--white);border-color:#383631}.darksection .lead{color:#bdb9af}.darksection .eyebrow{color:#99958c}.darksection .btn{border-color:var(--white)}.darksection .btn.dark{background:var(--white);color:var(--ink)}
+.regions{display:flex;flex-wrap:wrap;gap:10px;margin-top:35px}.pill{border:1px solid #4a4842;padding:10px 14px;font-size:12px;letter-spacing:.08em}
+.venture{display:grid;grid-template-columns:1fr 1fr;min-height:360px;border-top:1px solid var(--ink)}.venture>div{padding:45px}.venture>div+div{border-left:1px solid var(--ink)}.venture h3{font-family:var(--serif);font-size:48px;font-weight:400;margin:25px 0 10px}.venture p{max-width:450px;color:#5e5b54}
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px}.contact h2{font-size:clamp(52px,7vw,92px)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:15px}label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}.field{display:flex;flex-direction:column;gap:7px}.full{grid-column:1/-1}input,select,textarea{border:1px solid var(--line);background:rgba(255,255,255,.3);padding:14px;border-radius:0;outline:none}textarea{min-height:130px;resize:vertical}input:focus,select:focus,textarea:focus{border-color:var(--ink)}.consent{display:flex;gap:10px;align-items:flex-start;font-size:12px;color:var(--muted);text-transform:none;letter-spacing:0}.consent input{margin-top:3px}.formnote{grid-column:1/-1;font-size:11px;color:var(--muted)}
+footer{padding:55px 7vw;background:#ebe5da}.footgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}.footlogo{font-size:28px;font-weight:800;letter-spacing:.14em}.footcol h5{text-transform:uppercase;letter-spacing:.12em;font-size:10px;color:var(--muted);margin:0 0 15px}.footcol a{display:block;margin:7px 0;font-size:13px}.copyright{border-top:1px solid var(--line);margin-top:45px;padding-top:18px;font-size:11px;color:var(--muted);display:flex;justify-content:space-between}
+.notice{padding:15px 7vw;background:#e7e0d3;border-bottom:1px solid var(--line);font-size:12px;color:#5e5b54}
+@media(max-width:850px){.navlinks{display:none}.menu{display:block}.hero{grid-template-columns:1fr;min-height:auto;padding-top:140px;gap:60px}.hero-copy{margin:0}.section{padding:75px 6vw}.section-head,.contact{grid-template-columns:1fr;gap:30px;margin-bottom:45px}.grid3{grid-template-columns:1fr}.capabilities{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.step:nth-child(2n){border-right:0}.venture{grid-template-columns:1fr}.venture>div+div{border-left:0;border-top:1px solid var(--ink)}form{grid-template-columns:1fr}.full,.formnote{grid-column:auto}.footgrid{grid-template-columns:1fr 1fr}.copyright{display:block}.copyright span{display:block;margin-top:8px}}
+@media(max-width:520px){h1{font-size:58px}.capabilities,.process,.footgrid{grid-template-columns:1fr}.card,.venture>div{padding:26px}.nav{padding:17px 6vw}}
+
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 78% 28%,rgba(214,205,188,.55),transparent 28%),linear-gradient(120deg,transparent 35%,rgba(255,255,255,.35));opacity:.8}
+.hero{position:relative;overflow:hidden}.hero>*{position:relative;z-index:1}
+.hero h1{animation:rise .9s ease both}.hero-copy{animation:rise 1.1s .1s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+.card,.cap,.venture>div,.step{transition:transform .35s ease,background .35s ease}.card:hover,.cap:hover{transform:translateY(-5px);background:var(--white)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-top:55px}.stat{padding:28px;border-right:1px solid var(--ink)}.stat:last-child{border-right:0}.stat strong{display:block;font-family:var(--serif);font-size:42px;font-weight:400}.stat span{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;white-space:nowrap}.track{display:inline-block;animation:marquee 28s linear infinite;text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--muted)}.track span{margin:0 25px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--ink)}}
+@media(max-width:520px){.stats{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--ink)}.stat:last-child{border-bottom:0}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a class="logo" href="#top">AURANG</a>
+<div class="navlinks">
+<a href="#healthcare">Healthcare</a><a href="#products">Products</a><a href="#manufacturing">Manufacturing</a><a href="#global">Global</a><a href="#ventures">Ventures</a><a href="#contact">Contact</a>
+</div><button class="menu" aria-label="Open menu">☰</button>
+</nav>
+
+<div class="notice">Aurang is an India-based business operating across healthcare, commerce and technology.</div>
+
+<main id="top">
+<section class="hero">
+<div>
+<div class="eyebrow">10+ Years of Industry Experience · India</div>
+<h1>Pharmaceutical Sourcing. Contract Manufacturing. Global Trade.</h1>
+</div>
+<div class="hero-copy">
+<p>With <strong>10+ years of industry experience</strong>, Aurang connects pharmaceutical, nutraceutical and healthcare requirements with sourcing and manufacturing capabilities across India and international markets.</p>
+<p>From product identification and vendor coordination to contract manufacturing and export supply, we help businesses move from requirement to commercial opportunity.</p>
+<div class="ctas"><a class="btn dark" href="#healthcare">Explore Capabilities</a><a class="btn" href="#contact">Send an Enquiry</a></div>
+</div>
+</section>
+
+<div class="marquee"><div class="track"><span>PHARMACEUTICALS</span>·<span>CONTRACT MANUFACTURING</span>·<span>NUTRACEUTICALS</span>·<span>GLOBAL TRADE</span>·<span>PHARMACEUTICALS</span>·<span>CONTRACT MANUFACTURING</span>·<span>NUTRACEUTICALS</span>·<span>GLOBAL TRADE</span></div></div>
+
+<section class="section" style="padding-top:65px;padding-bottom:65px">
+<div class="stats">
+<div class="stat"><strong>10+</strong><span>Years Industry Experience</span></div>
+<div class="stat"><strong>360°</strong><span>Business Support</span></div>
+<div class="stat"><strong>B2B</strong><span>Global Focus</span></div>
+<div class="stat"><strong>01</strong><span>Direct Business Contact</span></div>
+</div>
+</section>
+
+<section class="section" id="healthcare">
+<div class="section-head">
+<div><div class="eyebrow">01 / Aurang Healthcare</div><h2>From product requirement to commercial supply.</h2></div>
+<p class="lead">Aurang is an India-based pharmaceutical sourcing, contract manufacturing and export partner, helping businesses discover, develop and supply healthcare products across international markets.</p>
+</div>
+<div class="grid3">
+<article class="card reveal"><span class="num">01</span><h3>Pharmaceuticals</h3><p>Finished formulations across a broad range of therapeutic and healthcare categories, subject to market and regulatory requirements.</p><a class="arrow" href="#contact">Discuss a requirement →</a></article>
+<article class="card reveal"><span class="num">02</span><h3>Contract Manufacturing</h3><p>Connect product requirements with appropriate third-party manufacturing capabilities, documentation and commercial coordination.</p><a class="arrow" href="#manufacturing">How it works →</a></article>
+<article class="card reveal"><span class="num">03</span><h3>Global Trade</h3><p>International sourcing, import-export coordination and business support for companies looking to access products from India.</p><a class="arrow" href="#global">Explore global business →</a></article>
+</div>
+</section>
+
+<section class="section" id="products">
+<div class="section-head"><div><div class="eyebrow">Portfolio</div><h2>Our Product Portfolio.</h2></div><p class="lead">A broad healthcare portfolio presented around real sourcing and supply capability—not an inflated catalogue.</p></div>
+<div class="capabilities">
+<div class="cap reveal"><h4>Finished Formulations</h4><p>Tablets, capsules, liquids and other dosage forms.</p></div>
+<div class="cap reveal"><h4>APIs & Raw Materials</h4><p>Active ingredients, intermediates and relevant inputs.</p></div>
+<div class="cap reveal"><h4>Injectables</h4><p>Relevant injectable products through suitable partners.</p></div>
+<div class="cap reveal"><h4>Oncology</h4><p>Specialized products subject to availability and market requirements.</p></div>
+<div class="cap reveal"><h4>Critical Care</h4><p>Healthcare products for institutional and commercial requirements.</p></div>
+<div class="cap reveal"><h4>Nutraceuticals</h4><p>Vitamins, minerals, supplements and wellness formulations.</p></div>
+<div class="cap reveal"><h4>Derma & OTC</h4><p>Dermatology, consumer healthcare and OTC categories.</p></div>
+<div class="cap reveal"><h4>Herbal & Veterinary</h4><p>Selected products and solutions where applicable.</p></div>
+</div>
+</section>
+
+<section class="section" id="manufacturing">
+<div class="section-head"><div><div class="eyebrow">02 / Contract Manufacturing</div><h2>Your product. The right manufacturing partner.</h2></div><p class="lead">Aurang coordinates contract-manufacturing requirements with suitable third-party manufacturing partners based on product specifications, market requirements and commercial feasibility.</p></div>
+<div class="process">
+<div class="step reveal"><b>01</b><h4>Requirement</h4><p>Share your product specification.</p></div>
+<div class="step reveal"><b>02</b><h4>Feasibility</h4><p>Review commercial and technical needs.</p></div>
+<div class="step reveal"><b>03</b><h4>Partner Match</h4><p>Identify suitable manufacturing capability.</p></div>
+<div class="step reveal"><b>04</b><h4>Documentation</h4><p>Coordinate required documents.</p></div>
+<div class="step reveal"><b>05</b><h4>Production</h4><p>Manufacture to agreed specifications.</p></div>
+<div class="step reveal"><b>06</b><h4>Dispatch</h4><p>Coordinate quality documents and shipment.</p></div>
+</div>
+</section>
+
+<section class="section darksection" id="global">
+<div class="section-head"><div><div class="eyebrow">03 / Global Business</div><h2>India connected to global healthcare markets.</h2></div><p class="lead">Aurang works with international buyers, distributors and healthcare businesses seeking pharmaceutical and nutraceutical products, sourcing support and manufacturing access from India.</p></div>
+<div class="regions"><span class="pill">AFRICA</span><span class="pill">MIDDLE EAST</span><span class="pill">CIS</span><span class="pill">SOUTHEAST ASIA</span><span class="pill">LATIN AMERICA</span><span class="pill">OTHER MARKETS</span></div>
+<div class="ctas"><a class="btn dark" href="#contact">Start a Business Enquiry</a></div>
+</section>
+
+<section class="section" id="ventures">
+<div class="section-head"><div><div class="eyebrow">04 / Beyond Healthcare</div><h2>Building beyond pharma.</h2></div><p class="lead">Healthcare is our flagship business. Aurang also builds ventures in technology and commerce.</p></div>
+<div class="venture">
+<div class="reveal"><div class="eyebrow">Technology</div><h3>CycleALIGN</h3><p>A women-centric app built around cycle-aware clarity, planning and productivity.</p><a class="arrow" target="_blank" rel="noopener" href="https://www.cyclealign.in/">Visit CycleALIGN ↗</a></div>
+<div class="reveal"><div class="eyebrow">Commerce</div><h3>Your Cute Little Store</h3><p>A consumer e-commerce venture within the Aurang ecosystem.</p><a class="arrow" target="_blank" rel="noopener" href="https://yourcutelittlestore.com/">Visit the store ↗</a></div>
+</div>
+</section>
+
+<section class="section" id="about">
+<div class="section-head"><div><div class="eyebrow">05 / About</div><h2>Built to evolve.</h2></div><p class="lead">Aurang is designed as a parent business with the flexibility to build, operate and connect ventures across different markets.</p></div>
+<div class="grid3">
+<div class="card"><span class="num">01</span><h3>10+ Years</h3><p>Industry experience across pharmaceutical business, sourcing and international markets.</p></div>
+<div class="card"><span class="num">02</span><h3>One Partner</h3><p>From product identification and sourcing to manufacturing coordination and export.</p></div>
+<div class="card"><span class="num">03</span><h3>Global Outlook</h3><p>Built around international sourcing, cross-border trade and long-term business relationships.</p></div>
+</div>
+<div style="margin-top:55px"><div class="eyebrow">Founder</div><h2 style="font-family:var(--serif);font-weight:400;font-size:42px;margin:0 0 10px">Vinita Thakur</h2><p class="lead">Founder of Aurang and builder across healthcare, commerce and technology.</p><a class="arrow" target="_blank" rel="noopener" href="https://vinitathakur.com/">Meet Vinita ↗</a></div>
+</section>
+
+<section class="section" id="contact">
+<div class="contact">
+<div><div class="eyebrow">06 / Contact</div><h2>Let's build something that moves.</h2><p class="lead">Tell us what you need. Our business team will review your enquiry.</p><p><strong>business@aurang.co.in</strong><br>+91 9971726030<br>Badarpur, New Delhi – 110044, India</p></div>
+<div>
+<form id="contactForm">
+<div class="field"><label for="name">Full name *</label><input id="name" name="name" required></div>
+<div class="field"><label for="company">Company *</label><input id="company" name="company" required></div>
+<div class="field"><label for="email">Business email *</label><input id="email" name="email" type="email" required></div>
+<div class="field"><label for="country">Country *</label><input id="country" name="country" required></div>
+<div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone"></div>
+<div class="field"><label for="type">Enquiry type *</label><select id="type" name="type" required><option value="">Select</option><option>Pharmaceutical Products</option><option>Contract Manufacturing</option><option>Nutraceuticals</option><option>API / Raw Materials</option><option>Import / Export</option><option>Regulatory / Market Support</option><option>Business Partnership</option><option>Other</option></select></div>
+<div class="field full"><label for="requirement">Product / requirement</label><input id="requirement" name="requirement"></div>
+<div class="field full"><label for="message">Message *</label><textarea id="message" name="message" required></textarea></div>
+<div class="field full"><label for="file">Document (optional)</label><input id="file" name="file" type="file" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.png,.jpg,.jpeg" /></div>
+<label class="consent full"><input type="checkbox" required> I consent to Aurang using the information submitted to respond to this business enquiry.</label>
+<div class="formnote">For security, sensitive credentials, payment information and unnecessary personal data should not be submitted through this form.</div>
+<button class="btn dark" type="submit">Send Enquiry</button>
+<div id="status" class="formnote" aria-live="polite"></div>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="footgrid">
+<div><div class="footlogo">AURANG</div><p style="color:var(--muted);max-width:280px">Healthcare · Commerce · Technology<br>Building businesses from India for the world.</p></div>
+<div class="footcol"><h5>Healthcare</h5><a href="#healthcare">Capabilities</a><a href="#products">Products</a><a href="#manufacturing">Contract Manufacturing</a><a href="#global">Global Business</a></div>
+<div class="footcol"><h5>Ventures</h5><a target="_blank" rel="noopener" href="https://www.cyclealign.in/">CycleALIGN</a><a target="_blank" rel="noopener" href="https://yourcutelittlestore.com/">Your Cute Little Store</a><a target="_blank" rel="noopener" href="https://vinitathakur.com/">Vinita Thakur</a></div>
+<div class="footcol"><h5>Contact</h5><a href="mailto:business@aurang.co.in">business@aurang.co.in</a><a href="tel:+919971726030">+91 9971726030</a><span>Badarpur, New Delhi – 110044</span></div>
+</div>
+<div class="copyright"><span>© <span id="year"></span> Aurang. All rights reserved.</span><span>Product availability and regulatory status are subject to verification and applicable jurisdiction.</span></div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const f=new FormData(this);
+  const subject=encodeURIComponent('Business Enquiry — '+f.get('type'));
+  const body=encodeURIComponent(
+`Name: ${f.get('name')}
+Company: ${f.get('company')}
+Business email: ${f.get('email')}
+Country: ${f.get('country')}
+Phone: ${f.get('phone')||''}
+Enquiry type: ${f.get('type')}
+Product / requirement: ${f.get('requirement')||''}
+
+Message:
+${f.get('message')}`
+  );
+  document.getElementById('status').textContent='Opening your email client…';
+  window.location.href=`mailto:business@aurang.co.in?subject=${subject}&body=${body}`;
+});
+document.querySelector('.menu').addEventListener('click',()=>document.querySelector('.navlinks').style.display=document.querySelector('.navlinks').style.display==='flex'?'none':'flex');
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
